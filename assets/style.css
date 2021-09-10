@@ -161,10 +161,13 @@ form input{
     color: #e1eb86;
 }
 form select{
+    margin-top: 1%;
     margin: auto;
-    width: 30%;
+    width: 25%;
 }
 form h3{
+    padding-top: 2%;
+    padding-bottom: 2%;
     color: #e1eb86;
 }
 
@@ -181,9 +184,81 @@ footer a{
     text-decoration: none;
     color: #E3EAA5;
 }
+/*Boton*/
+.btn{
+padding: 1.5%;
+margin: auto;
+width: 20%;
+margin-top: 4%;
+background-color:#151931;
+border: none;
+border-radius: 12px;
+color: #e1eb86;
+text-transform: uppercase;
+cursor: pointer;
+}
+.btn:hover{
+    color:#151931;
+    background-color: #e1eb86;
+}
 
-/*Musica*/
+/*Media Queries*/
 
-audio.music {
-    z-index: -9999;
+@media (max-width: 756px) {
+    #background{
+        object-fit: cover;
+        /* background-position: cover; */
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    /*principla*/
+    .principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .Contenido p{
+        padding: 1%;
+        text-align:justify;
+        font-size: 0.8em;
+    }
+    h1{
+        padding-top:10% ;
+    }
+    /*publicidades*/
+    .publicity{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        border-top: 2px solid #AA5522;
+    }
+    .ads{
+        padding-top: 2%;
+        border: none;
+    }
+    /*Formulario*/
+    .formulario{
+        width: 70%;
+    }
+    form h3{
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    form .UserInfo{
+        padding-bottom: 4%;
+    }
+    form input{
+        padding-bottom: 7%;
+    }
+    form select{
+        width: 70%;
+    }
+    /*btn*/
+    .btn{
+        margin-top: 10%;
+        margin-bottom: 6%;
+        padding: 3%;
+        width: 30%;
+        cursor: pointer;
+    }
+
 }
