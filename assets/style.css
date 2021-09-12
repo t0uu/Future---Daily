@@ -150,16 +150,20 @@ display: flex;
 flex-direction: column;
 text-align: center;
 margin: auto;   
-padding-bottom: 1%;
+align-items: center;
+padding-bottom: 2%;
 }
 form input{
     background-color: #E3EAA5;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    color: #e1eb86;
-}
+    color: black;
+    text-align: center;
+    padding: 6%;
+    margin-bottom: 10%;
+ }
 form select{
     margin-top: 1%;
     margin: auto;
@@ -247,7 +251,10 @@ cursor: pointer;
         padding-bottom: 4%;
     }
     form input{
+
+        align-items: center;
         padding-bottom: 7%;
+        border-radius: 4px;
     }
     form select{
         width: 70%;
