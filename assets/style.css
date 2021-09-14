@@ -34,8 +34,36 @@ Header{
     background-color: #1519313f;
     box-shadow: 5px 5px 5px 8px rgba(142, 4, 255, 0);
     padding-bottom: 2%;
+    top: 0;
+    left: 0;
+    position: sticky;
 }
 /*Navbar*/
+#menu{
+    display: none;
+}
+label{
+    display: none;
+}
+label i{
+    display: inline-block;
+    color: #AA5522;
+    margin: auto;
+    width: 30px;
+    height: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+ul{
+    display: block;
+}
+#menu:checked ~ ul{
+    display: none;
+    
+}
 Nav {
     padding-top: 1.5%;
 }
@@ -207,17 +235,21 @@ cursor: pointer;
 }
 
 /*Media Queries*/
-
-@media (max-width: 756px) {
+@media (max-width: 1024px ) {
     #background{
         object-fit: cover;
-        /* background-position: cover; */
-        min-width: 100vw;
-        min-height: 100vh;
+        max-width: 100%;
+        min-height: 100vw;
     }
-    /*principla*/
+}
+@media (max-width: 768px) {
+    #background{
+        object-fit: cover;
+        min-width: 100vh;
+        min-height: 100vw;
+    }
+    /*principal*/
     .principal{
-        display: flex;
         flex-direction: column;
     }
     .Contenido p{
@@ -226,11 +258,17 @@ cursor: pointer;
         font-size: 0.8em;
     }
     h1{
-        padding-top:10% ;
+        padding-top:5% ;
+    }
+    #mainVideo{
+        width: 80%;
+    }
+    .imagen{
+        width: 80%;
     }
     /*publicidades*/
     .publicity{
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         margin: auto;
         border-top: 2px solid #AA5522;
@@ -239,9 +277,13 @@ cursor: pointer;
         padding-top: 2%;
         border: none;
     }
+    .ads img{
+        width: 50%;
+        padding-top: 2% ;
+    }
     /*Formulario*/
     .formulario{
-        width: 70%;
+        width: 50%;
     }
     form h3{
         padding-top: 4%;
@@ -267,5 +309,43 @@ cursor: pointer;
         width: 30%;
         cursor: pointer;
     }
+    /*Burguer*/
+    label{
+        display: flex;
+        /* position: absolute;
+        margin-left: 94%; */
+    }
+    ul{
+        display: none;
+    }
+    #menu:checked ~ ul{
+        display: block;   
+    }
 
+}
+
+@media (max-width:425px ) {
+    #background{
+        object-fit: cover;
+        /* min-width: 100vw; */
+        height: 100%;
+    }
+
+    /*formulario*/
+    .formulario{
+        width: 70%;
+    }
+    /**/
+    .ads{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (max-width: 320px) {
+    .formulario{
+        width: 80%;
+    }
+    .NavList a{
+        font-size: 0.8em;
+    }    
 }
